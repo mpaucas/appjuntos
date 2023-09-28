@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="img/banner.png" class="header" />
+    <header>
+      <div class="contenedor">
+        <div class="grid">
+          <div>
+            <a href="index.html">
+              <img src="img/home.svg" />
+            </a>
+          </div>
+          <div>
+            <a href="index.html" class="logo">
+              <img src="img/logo.png" />
+            </a>
+          </div>
+          <div>
+            <a href="ajustes.html">
+              <img src="img/config.svg" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="config_process mb_section">
+        <div class="contenedor">
+          <ul class="breadcrumb">
+            <li>
+              <a href="index.html">Inicio /</a>
+            </li>
+            <li>
+              <p>Visualiza tus logros /</p>
+            </li>
+            <li>
+              <p id="cambioTag">Panorama general</p>
+            </li>
+          </ul>
+        </div>
+        <div class="contenedor center column">
+          <div class="pill_title center">
+            <div class="pill_title_img">
+              <img src="img/ojo.png" />
+            </div>
+            <div class="pill_title_txt">
+              <h1>Visualiza<br /><span>tus logros</span></h1>
+            </div>
+          </div>
+        </div>
+        <div class="contenedor cantidades_tiempo">
+          <h1>Desde que iniciaste tu tratamiento llevas</h1>
+          <div class="center">
+            <div class="bg-white tiempo">
+              <h1>00</h1> semanas
+            </div>
+            <div class="bg-white tiempo">
+              <h1>000</h1> días
+            </div>
+          </div>
+        </div>
+        <div class="bg-white">
+          <div class="contenedor center contenedor_logros">
+            <button id="progreso" data-number="1" class="menu_logros">
+              <img src="img/copa.png">
+              <div class="col">
+                <span>Tu progreso</span>
+                <span class="mostrar">Ver</span>
+              </div>
+            </button>
+            <button id="graficos" data-number="2" class="menu_logros">
+              <img src="img/graficos.png">
+              <div class="col">
+                <span>Gráficos de medidas</span>
+                <span class="mostrar">Ver</span>
+              </div>
+            </button>
+            <button id="cambios" data-number="3" class="menu_logros">
+              <img src="img/nave.png">
+              <div class="col">
+                <span>Evaluación de cambios</span>
+                <span class="mostrar">Ver</span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="contenedor">
+          <div class="tabs_logros">
+            <div class="tab logros inicial">
+              <span class="titulo_tab">Titulación y adherencia</span>
+              <div class="etapas">
+                <p>Proceso<br><b>inicial</b></p>
+                <div class="timeline-container">
+                  <div class="progress-avance">
+                    <div class="timeline-progress" id="timeline-logro"></div>
+                  </div>
+                  <div class="step_logros step_select">
+                    <div class="time_line_toast">
+                      Completa
+                    </div>
+                  </div>
+                  <div class="step_logros step_select">
+                    <div class="time_line_toast">
+                      Completa
+                    </div>
+                  </div>
+                  <div class="step_logros step_select_rosa">
+                    <div class="time_line_toast">
+                      En proceso
+                    </div>
+                  </div>
+                  <div class="step_logros">
+                    <div class="time_line_toast">
+                      Pendiente
+                    </div>
+                  </div>
+                  <div class="step_logros">
+                    <div class="time_line_toast">
+                      Pendiente
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab secundario logros">
+              <label class="slider-container">
+                <input type="checkbox" id="slider" onchange="cambiarTab(this)">
+                <div class="slider">
+                  <div class="pin">
+                    <div></div>
+                  </div>
+                  <div class="slider-content">
+                    <div>
+                      <img src="img/reglas.png" alt=""> Talla
+                    </div>
+                    <div>
+                      <img src="img/pesas.png" alt=""> Peso
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <div class="tab_switch selected">
+                <span class="titulo_tab">La <b>evolución</b> de tu peso</span>
+                <div class="section_tab">
+                  <div class="graficos"></div>
+                </div>
+                <div class="lista_botones">
+                  <button class="btn_amarillo" onclick="openModal(1)">
+                    <img src="img/anadir.png" alt="">
+                    <span>Ingresar datos</span>
+                  </button>
+                  <button class="btn_amarillo" onclick="toggleColumn(this)">
+                    <img src="img/editar.png" alt="">
+                    <span>Editar datos</span>
+                  </button>
+                  <button class="btn_amarillo">
+                    <img src="img/descargar.png" alt="">
+                    <span>Descargar datos</span>
+                  </button>
+                </div>
+                <div class="tabla_datos">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="principal">
+                          <div>
+                            <img src="img/calendario.png" alt="">
+                            Fecha:
+                            <input type="text" disabled value="10/102021">
+                          </div>
+                        </td>
+                        <td class="final">
+                          <div>
+                            Talla: 
+                            <input type="text" disabled value="110 cm">
+                          </div>
+                        </td>
+                        <td class="final hidden">
+                            <button>
+                              <img src="img/delete.png" alt="">
+                              Eliminar 
+                            </button>
+                        </td>
+                      </tr>
+                      <tr class="fila_claro">
+                        <td class="principal">
+                          <div>
+                            <img src="img/calendario.png" alt="">
+                            Fecha:
+                            <input type="text" disabled value="10/102021">
+                          </div>
+                        </td>
+                        <td class="final">
+                          <div>
+                            Talla: 
+                            <input type="text" disabled value="110 cm">
+                          </div>
+                        </td>
+                        <td class="final hidden">
+                            <button>
+                              <img src="img/delete.png" alt="">
+                              Eliminar 
+                            </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="principal">
+                          <div>
+                            <img src="img/calendario.png" alt="">
+                            Fecha:
+                            <input type="text" disabled value="10/102021">
+                          </div>
+                        </td>
+                        <td class="final">
+                          <div>
+                            Talla: 
+                            <input type="text" disabled value="110 cm">
+                          </div>
+                        </td>
+                        <td class="final hidden">
+                            <button>
+                              <img src="img/delete.png" alt="">
+                              Eliminar 
+                            </button>
+                        </td>
+                      </tr>
+                      <tr class="fila_claro">
+                        <td class="principal">
+                          <div>
+                            <img src="img/calendario.png" alt="">
+                            Fecha:
+                            <input type="text" disabled value="10/102021">
+                          </div>
+                        </td>
+                        <td class="final">
+                          <div>
+                            Talla: 
+                            <input type="text" disabled value="110 cm">
+                          </div>
+                        </td>
+                        <td class="final hidden">
+                            <button>
+                              <img src="img/delete.png" alt="">
+                              Eliminar 
+                            </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <button class="btn_rosa">ver anteriores</button>
+              </div>
+              <div class="tab_switch">
+                <span class="titulo_tab">Así <b>cambia</b> tu abdomen</span>
+                <div class="section_tab">
+                  <div class="graficos"></div>
+                </div>
+                <div class="lista_botones">
+                  <button class="btn_amarillo" onclick="openModal(2)">
+                    <img src="img/anadir.png" alt="">
+                    <span>Ingresar datos</span>
+                  </button>
+                  <button class="btn_amarillo" onclick="toggleColumn(this)">
+                    <img src="img/editar.png" alt="">
+                    <span>Editar datos</span>
+                  </button>
+                  <button class="btn_amarillo">
+                    <img src="img/descargar.png" alt="">
+                    <span>Descargar datos</span>
+                  </button>
+                </div>
+                <div class="tabla_datos">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="principal">
+                          <div>
+                            <img src="img/calendario.png" alt="">
+                            Fecha:
+                            <input type="text" disabled value="10/102021">
+                          </div>
+                        </td>
+                        <td class="final">
+                          <div>
+                            Talla: 
+                            <input type="text" disabled value="110 cm">
+                          </div>
+                        </td>
+                        <td class="final hidden">
+                            <button>
+                              <img src="img/delete.png" alt="">
+                              Eliminar 
+                            </button>
+                        </td>
+                      </tr>
+                      <tr class="fila_claro">
+                        <td class="principal">
+                          <div>
+                            <img src="img/calendario.png" alt="">
+                            Fecha:
+                            <input type="text" disabled value="10/102021">
+                          </div>
+                        </td>
+                        <td class="final">
+                          <div>
+                            Peso: 
+                            <input type="text" disabled value="110 kg">
+                          </div>
+                        </td>
+                        <td class="final hidden">
+                            <button>
+                              <img src="img/delete.png" alt="">
+                              Eliminar 
+                            </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="principal">
+                          <div>
+                            <img src="img/calendario.png" alt="">
+                            Fecha:
+                            <input type="text" disabled value="10/102021">
+                          </div>
+                        </td>
+                        <td class="final">
+                          <div>
+                            Talla: 
+                            <input type="text" disabled value="110 cm">
+                          </div>
+                        </td>
+                        <td class="final hidden">
+                            <button>
+                              <img src="img/delete.png" alt="">
+                              Eliminar 
+                            </button>
+                        </td>
+                      </tr>
+                      <tr class="fila_claro">
+                        <td class="principal">
+                          <div>
+                            <img src="img/calendario.png" alt="">
+                            Fecha:
+                            <input type="text" disabled value="10/102021">
+                          </div>
+                        </td>
+                        <td class="final">
+                          <div>
+                            Talla: 
+                            <input type="text" disabled value="110 cm">
+                          </div>
+                        </td>
+                        <td class="final hidden">
+                            <button>
+                              <img src="img/delete.png" alt="">
+                              Eliminar 
+                            </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <button class="btn_rosa">ver anteriores</button>
+              </div>
+              <div class="aviso_rosa">
+                En estos gráficos verás la evolución de las medidas que has registrad. Descuida! A esta información sólo tendrás acceso tú
+              </div>
+            </div>
+            <div class="tab logros inicial">
+              <span class="titulo_tab">Tu progreso en el camino al cambio</span>
+              <div class="section_tab">
+                <table class="table_logros">
+                  <thead>
+                    <tr>
+                      <td class="principal">Topic</td>
+                      <td>Basal Q preguntas</td>
+                      <td>Basal puntos obtenidos (1)</td>
+                      <td>Seguimiento Q preguntas (1)</td>
+                      <td>Mi última respuesta</td>
+                      <td>Mi respuesta labotal</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="principal">Motivacion</td>
+                      <td>3</td>
+                      <td>8</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td class="final">2.67</td>
+                    </tr>
+                    <tr>
+                      <td class="principal">Feeding</td>
+                      <td>3</td>
+                      <td>8</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td class="final">2.67</td>
+                    </tr>
+                    <tr>
+                      <td class="principal">Excercise</td>
+                      <td>3</td>
+                      <td>8</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td class="final">2.67</td>
+                    </tr>
+                    <tr>
+                      <td class="principal">Sleep well</td>
+                      <td>3</td>
+                      <td>8</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td class="final">2.67</td>
+                    </tr>
+                    <tr>
+                      <td class="principal">Facing situacions</td>
+                      <td>3</td>
+                      <td>8</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td class="final">2.67</td>
+                    </tr>
+                    <tr>
+                      <td class="principal">Psychological state</td>
+                      <td>3</td>
+                      <td>8</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td class="final">2.67</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="6">(1) ejemplo que depende de la encuesta de seguimiento que se esté realizando y de la cantidad de puntos obtenidos</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <div class="section_tab">
+                <div class="graficos"></div>
+              </div>
+              <div class="section_tab">
+                <div class="graficos"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contenedor contenedor_procesos">
+          <button class="btn_proceso selected" data-number="1">
+            <img src="img/inicial.png">
+            <span>Ver tu proceso inicial</span>
+          </button>
+          <button class="btn_proceso" data-number="2">
+            <img src="img/cambio.png">
+            <span>Ver tu proceso al cambio</span>
+          </button>
+          <button class="btn_proceso" data-number="3">
+            <img src="img/contenidos.png">
+            <span>Ver tus contenidos de mantenimiento</span>
+          </button>
+          <button class="btn_proceso" data-number="4">
+            <img src="img/puntos.png">
+            <span>Ver tus puntos ganados</span>
+          </button>
+        </div>
+        <div class="contenedor">
+          <div class="tabs_procesos">
+            <div class="tab inicial selected">
+              <span class="titulo_tab">Proceso inicial</span>
+              <div class="etapas">
+                <p>Proceso<br><b>inicial</b></p>
+                <div class="timeline-container">
+                  <div class="progress-avance">
+                    <div class="timeline-progress" id="timeline-progress"></div>
+                  </div>
+                  <div class="step step_select" onclick="selectStep(1)">
+                    <div class="time_line_toast">
+                      Visualización video incial
+                    </div>
+                  </div>
+                  <div class="step" onclick="selectStep(2)">
+                    <div class="time_line_toast">
+                      Definicion de objetivos
+                    </div>
+                  </div>
+                  <div class="step" onclick="selectStep(3)">
+                    <div class="time_line_toast">
+                      Configuración de proceso
+                    </div>
+                  </div>
+                  <div class="step" onclick="selectStep(4)">
+                    <div class="time_line_toast">
+                      Encuesta inicial
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab inicial">
+              <span class="titulo_tab">Proceso al cambio</span>
+              <div class="etapas">
+                <div class="sub_titulo_etapas">
+                  <img src="img/candado.png" alt="">
+                  <p>Nivel<br><b>Max</b></p>
+                </div>
+                <div class="timeline-container">
+                  <div class="progress-avance">
+                    <div class="timeline-progress" id="timeline-max"></div>
+                  </div>
+                  <div class="step_visualizar step_select"></div>
+                  <div class="step_visualizar step_select">
+                    <div class="time_line_toast">
+                      Estás aqui
+                    </div>
+                  </div>
+                  <div class="step_visualizar"></div>
+                  <div class="step_visualizar"></div>
+                  <div class="step_visualizar"></div>
+                  <div class="step_visualizar"></div>
+                </div>
+              </div>
+              <div class="etapas">
+                <div class="sub_titulo_etapas">
+                  <img src="img/candado.png" alt="">
+                  <p>Nivel<br><b>Pro</b></p>
+                </div>
+                <div class="timeline-container">
+                  <div class="progress-avance">
+                    <div class="timeline-progress" id="timeline-pro"></div>
+                  </div>
+                  <div class="step_visualizar step_select_rosa"></div>
+                  <div class="step_visualizar step_select_rosa"></div>
+                  <div class="step_visualizar step_select_rosa">
+                    <div class="time_line_toast">
+                      Estás aqui
+                    </div>
+                  </div>
+                  <div class="step_visualizar"></div>
+                  <div class="step_visualizar"></div>
+                  <div class="step_visualizar"></div>
+                </div>
+              </div>
+              <div class="etapas">
+                <div class="sub_titulo_etapas">
+                  <img src="img/candado.png" alt="">
+                  <p>Nivel<br><b>Plus</b></p>
+                </div>
+                <div class="timeline-container">
+                  <div class="progress-avance">
+                    <div class="timeline-progress" id="timeline-plus"></div>
+                  </div>
+                  <div class="step_visualizar step_select">
+                    <div class="time_line_toast">
+                      Estás aqui
+                    </div>
+                  </div>
+                  <div class="step_visualizar"></div>
+                  <div class="step_visualizar"></div>
+                  <div class="step_visualizar"></div>
+                  <div class="step_visualizar"></div>
+                  <div class="step_visualizar"></div>
+                </div>
+              </div>
+              <div class="etapas">
+                <div class="sub_titulo_etapas">
+                  <img src="img/candado.png" alt="">
+                  <p>Nivel<br><b>Master</b></p>
+                </div>
+                <div class="timeline-container">
+                  <div class="progress-avance">
+                    <div class="timeline-progress" id="timeline-master"></div>
+                  </div>
+                  <div class="step_visualizar step_select_rosa"></div>
+                  <div class="step_visualizar step_select_rosa"></div>
+                  <div class="step_visualizar step_select_rosa"></div>
+                  <div class="step_visualizar step_select_rosa">
+                    <div class="time_line_toast">
+                      Estás aqui
+                    </div>
+                  </div>
+                  <div class="step_visualizar"></div>
+                  <div class="step_visualizar"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab secundario">
+              <span class="titulo_tab">Contenidos de mantenimientos</span>
+              <div class="graficos_contenido">
+                <div class="contenido">
+                  <span class="titulo">Contenidos vistos</span>
+                  <div class="graficos"></div>
+                </div>
+                <div class="contenido">
+                  <span class="titulo">Contenidos por ver</span>
+                  <div class="graficos"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab especial secundario">
+              <span class="titulo_tab">Puntos ganados</span>
+              <p class="descripcion_tab">Ahora tienes <span>3</span> estrellas</p>
+            </div>
+            <a href="index.html" class="back">
+              <img src="img/back.png" />
+              <p>Volver atrás</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <div id="modalTalla" class="modal">
+        <div class="modal-content modal-add">
+          <span class="close" onclick="closeModal(this)">&times;</span>
+          <h1>Ingresar datos</h1>
+          <div class="input-group">
+            <label>Fecha de medición</label>
+            <input type="date">
+          </div>
+          <div class="input-group">
+            <div class="input-contador">
+              <label>Altura (cm)</label>
+              <input type="number" id="rangenumber" min="0" max="300" value="0" disabled>
+            </div>
+            <div class="control_range">
+                <input type="range" value="0" min="0" max="300" oninput="rangenumber.value=value" class="rango_medida rango_light" id="range_talla"/>
+            </div>
+          </div>
+          <button class="save">
+            Guardar
+          </button>
+        </div>
+      </div>
+      <div id="modalPeso" class="modal">
+        <div class="modal-content modal-add">
+          <span class="close" onclick="closeModal(this)">&times;</span>
+          <h1>Ingresar datos</h1>
+          <div class="input-group">
+            <label>Fecha de medición</label>
+            <input type="date">
+          </div>
+          <div class="input-group">
+            <div class="input-contador">
+              <label>Peso (kg)</label>
+              <input type="number" id="rangepeso" min="0" max="300" value="0" disabled>
+            </div>
+            <div class="control_range">
+                <input type="range" value="0" min="0" max="300" oninput="rangepeso.value=value" class="rango_medida rango_light" id="range_peso"/>
+            </div>
+          </div>
+          <button class="save">
+            Guardar
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <img src="img/footer.png" />
+      <div class="contenedor">
+        <img src="img/logo.svg" class="logo" />
+        <div class="grid">
+          <div>
+            <p>
+              <small>
+                Este sitio web es propiedad de MERCK S.A., afiliada del Grupo
+                Merck. Su contenido ha sido diseñado exclusivamente para
+                pacientes residentes en Argentina que se encuentran inscriptos
+                en el Programa de Soporte a Pacientes de Saizen®. En ningún caso
+                la información contenida en la misma sustituye la consulta, el
+                tratamiento y las recomendaciones del profesional de la
+                salud.<br /><br />
+                2023 / MERCK S.A. © Todos los derechos reservados |
+                MX-SAI-00101, May/2023<br />
+                Conozca más sobre MERCK en https://www.merckgroup.com/mx-es
+              </small>
+            </p>
+            <br /><br />
+            <p>
+              © 2023 Merck&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Hecho
+              por InVitro
+            </p>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <p>Horario de Atención:</p>
+              </li>
+              <li>
+                <p>L-S: 08 am - 09 pm</p>
+              </li>
+              <li>
+                <p>Atención hora del centro (CDMX)</p>
+              </li>
+              <li>
+                <p>Tel: (800) 9420 100</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="internal">
+              <li>
+                <a href="#">Términos y Condiciones</a>
+              </li>
+              <li>
+                <a href="#">Política de Privacidad</a>
+              </li>
+              <li>
+                <a href="#">Política de Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function selectStep(stepNumber) {
+        // Get all steps
+        const steps = document.querySelectorAll('.step');
+
+        // Reset color for all steps
+        steps.forEach((step, index) => {
+          if(stepNumber <= index){
+            step.classList.remove('step_select');
+          }else{
+            // Set color for the selected step
+            steps[index].classList.add('step_select');
+          }
+        });
+
+        
+
+        // Update timeline progress width
+        const timelineProgress = document.getElementById('timeline-progress');
+        const stepWidth = 100 / steps.length;
+        timelineProgress.style.width = `${stepWidth * stepNumber}%`;
+      }
+
+      function toggleColumn(e) {
+        const table = e.parentElement.parentElement.querySelector('.tabla_datos table');
+        const columnIndex = 2; // Índice de la columna que queremos ocultar (empezando desde 0)
+        const inputs = table.querySelectorAll('input');
+
+        for (let i = 0; i < table.rows.length; i++) {
+          const row = table.rows[i];
+          const cell = row.cells[columnIndex];
+
+          if (cell.classList.contains('hidden')) {
+            cell.classList.remove('hidden');
+            row.cells[columnIndex - 1].classList.remove('final')
+            inputs.forEach(input => {
+              input.disabled = false;
+            });
+          } else {
+            cell.classList.add('hidden');
+            row.cells[columnIndex - 1].classList.add('final')
+            inputs.forEach(input => {
+              input.disabled = true;
+            });
+          }
+        }
+      }
+
+      function openModal(number) {
+        let modal = '';
+        if(number == 1){
+          modal = document.getElementById('modalTalla');
+        }else{
+          modal = document.getElementById('modalPeso');
+        }
+        modal.style.display = 'flex';
+
+        // Deshabilitar el scroll de la página principal
+        document.body.classList.add('modal-open');
+      }
+
+      function closeModal(e) {
+        const modal = e.parentElement.parentElement;
+        modal.style.display = 'none';
+
+        // Habilitar el scroll de la página principal
+        document.body.classList.remove('modal-open');
+      }
+
+      const btns = document.querySelectorAll('.btn_proceso');
+      
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+
+          btns.forEach(btn2 => {
+            if(btn2.classList.contains('selected')){
+              btn2.classList.remove('selected')
+            }
+          });
+
+          btn.classList.add('selected');
+          const tabNumber = parseInt(btn.getAttribute('data-number'));
+          const tabs = document.querySelectorAll('.tabs_procesos .tab');
+
+          // Reset color for all steps
+          tabs.forEach((tab) => {
+            tab.classList.remove('selected')
+          });
+
+          tabs[tabNumber - 1].classList.add('selected');
+        })
+      });
+
+      const btnProcesos = document.querySelectorAll('.menu_logros');
+
+      btnProcesos.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          btnProcesos.forEach(btn2 => {
+            btn2.classList.remove('select_menu_1')
+            btn2.classList.remove('select_menu_2')
+            btn2.classList.remove('select_menu_3')
+          });
+
+          btn.classList.add(`select_menu_${index+1}`);
+
+          const tabNumber = parseInt(btn.getAttribute('data-number'));
+          const tabs = document.querySelectorAll('.tabs_logros .tab')
+
+          tabs.forEach((tab) => {
+            tab.classList.remove('selected')
+          });
+
+          tabs[tabNumber - 1].classList.add('selected');
+
+          const textoTitulo = document.getElementById('cambioTag')
+          if(tabNumber == 1){
+            textoTitulo.textContent = 'Tu progreso';
+          }else if(tabNumber == 2){
+            textoTitulo.textContent = 'Gráficos de medidas';
+          }else{
+            textoTitulo.textContent = 'Evolución de cambios';
+          }
+        })
+      });
+
+      const rangeInputs = document.querySelectorAll('.rango_medida')
+
+        function handleInputChange(e) {
+
+            let rangeInput = e.target;
+            
+            const min = rangeInput.min
+            const max = rangeInput.max
+            const val = rangeInput.value
+            let percentage = (val - min) * 100 / (max - min)
+
+            rangeInput.style.backgroundSize = percentage + '% 100%'
+        }
+
+      rangeInputs.forEach(input => {
+          input.addEventListener('input', handleInputChange)
+      })
+
+      function cambiarTab(e){
+        const tabsSwitch = document.querySelectorAll('.tab_switch')
+          if (e.checked) {
+            tabsSwitch[1].classList.add('selected')
+            tabsSwitch[0].classList.remove('selected')
+          } else {
+            tabsSwitch[0].classList.add('selected')
+            tabsSwitch[1].classList.remove('selected')
+          }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="img/banner.png" class="header" />
+    <header>
+      <div class="contenedor">
+        <div class="grid">
+          <div>
+            <a href="index.html">
+              <img src="img/home.svg" />
+            </a>
+          </div>
+          <div>
+            <a href="index.html" class="logo">
+              <img src="img/logo.png" />
+            </a>
+          </div>
+          <div>
+            <a href="ajustes.html">
+              <img src="img/config.svg" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="config_process mb_section">
+        <div class="contenedor">
+          <ul class="breadcrumb">
+            <li>
+              <a href="index.html">Inicio /</a>
+            </li>
+            <li>
+              <p>Registra tus medidas</p>
+            </li>
+          </ul>
+        </div>
+        <div class="contenedor center column">
+          <div class="pill_title center">
+            <div class="pill_title_img">
+              <img src="img/list-pill.png" />
+            </div>
+            <div class="pill_title_txt">
+              <h1>Registra<br /><span>tus medidas</span></h1>
+            </div>
+          </div>
+          <div class="center">
+            <button id="mostrar_video" class="btn_video center">
+                <img src="img/modulos/btnCamara.png" />
+                <span>Ver video de ayuda</span>
+            </button>
+          </div>
+        </div>
+        <div class="contenedor">
+          <div class="col">
+            <div class="text-center center column">
+              <h2>
+                ¿Cuánto marca tu <b>balanza</b> hoy?
+              </h2>
+              <div class="control_rango_items">
+                <div class="pesaje">
+                    <img src="img/balanza.png">
+                    <input type="number" id="rangenumber" min="0" max="300" value="00.00">
+                    <p>kg</p>
+                </div>
+                <div class="control_range">
+                    <div class="botones_rango">
+                        <button data-accion="bajar">-</button>
+                        <button data-accion="subir">+</button>
+                    </div>
+                    <input type="range" value="00.00" min="0" max="300" class="rango_medida" id="range_peso"/>
+                </div>
+              </div>
+            </div>
+            <div class="text-center center column">
+              <h2>
+                ¿Cuánto <b>mide</b> tu perímetro abdominal hoy?
+              </h2>
+              <div class="control_rango_items">
+                <div class="pesaje">
+                    <img src="img/regla.png">
+                    <input type="number" id="rangenumber" min="0" max="300" value="00.00">
+                    <p>cm</p>
+                </div>
+                <div class="control_range">
+                    <div class="botones_rango">
+                        <button data-accion="bajar">-</button>
+                        <button data-accion="subir">+</button>
+                    </div>
+                    <input type="range" value="00.00" min="0" max="300" class="rango_medida" id="range_peso"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hr"></div>
+          <div class="center column">
+            <div class="obj_accord col-20">
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+              <h3><b>Activar</b> mensajes recordatorios</h3>
+            </div>
+            <button class="save">Guardar</button>
+          </div>
+
+          <a href="index.html" class="back">
+            <img src="img/back.png" />
+            <p>Volver atrás</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="img/footer.png" />
+      <div class="contenedor">
+        <img src="img/logo.svg" class="logo" />
+        <div class="grid">
+          <div>
+            <p>
+              <small>
+                Este sitio web es propiedad de MERCK S.A., afiliada del Grupo
+                Merck. Su contenido ha sido diseñado exclusivamente para
+                pacientes residentes en Argentina que se encuentran inscriptos
+                en el Programa de Soporte a Pacientes de Saizen®. En ningún caso
+                la información contenida en la misma sustituye la consulta, el
+                tratamiento y las recomendaciones del profesional de la
+                salud.<br /><br />
+                2023 / MERCK S.A. © Todos los derechos reservados |
+                MX-SAI-00101, May/2023<br />
+                Conozca más sobre MERCK en https://www.merckgroup.com/mx-es
+              </small>
+            </p>
+            <br /><br />
+            <p>
+              © 2023 Merck&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Hecho
+              por InVitro
+            </p>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <p>Horario de Atención:</p>
+              </li>
+              <li>
+                <p>L-S: 08 am - 09 pm</p>
+              </li>
+              <li>
+                <p>Atención hora del centro (CDMX)</p>
+              </li>
+              <li>
+                <p>Tel: (800) 9420 100</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="internal">
+              <li>
+                <a href="#">Términos y Condiciones</a>
+              </li>
+              <li>
+                <a href="#">Política de Privacidad</a>
+              </li>
+              <li>
+                <a href="#">Política de Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        const rangeInputs = document.querySelectorAll('.rango_medida')
+        const numberInputs = document.querySelectorAll('.pesaje input')
+        const buttons = document.querySelectorAll('.botones_rango button')
+
+        function handlePercentage(rangeInput){
+            const min = rangeInput.min
+            const max = rangeInput.max
+            const val = rangeInput.value
+            let percentage = (val - min) * 100 / (max - min)
+
+            rangeInput.style.backgroundSize = percentage + '% 100%'
+        }
+
+        function handleInputChange(e) {
+
+            let numberInput = '';
+            let rangeInput = '';
+            if (e.target.type !== 'range') {
+                numberInput = e.target;
+                rangeInput = e.target.parentElement.parentElement.querySelector('input[type=range]')
+                rangeInput.value = numberInput.value;
+            }else{
+                rangeInput = e.target;
+                numberInput = e.target.parentElement.parentElement.querySelector('input[type=number]')
+                numberInput.value = parseFloat(rangeInput.value).toFixed(2);
+            }
+            
+            handlePercentage(rangeInput);
+        }
+
+        function handleButtonClick(e) {
+            const action = e.target.getAttribute('data-accion');
+            const numberInput = e.target.parentElement.parentElement.parentElement.querySelector('input[type=number]')
+            const rangeInput = e.target.parentElement.parentElement.querySelector('input[type=range]')
+            let currentValue = parseFloat(numberInput.value);
+
+            if (action === 'subir' && currentValue < 300) {
+                currentValue += 1;
+            } else if (action === 'bajar' && currentValue > 0) {
+                currentValue -= 1;
+            }
+
+            numberInput.value = currentValue.toFixed(2);
+            rangeInput.value = currentValue.toFixed(2);
+            handlePercentage(rangeInput); // Actualizar el estilo del range
+        }
+
+            rangeInputs.forEach(input => {
+                input.addEventListener('input', handleInputChange)
+            })
+
+            numberInputs.forEach(input => {
+                input.addEventListener('input', handleInputChange)
+            })
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', handleButtonClick)
+            });
+    </script>
+  </body>
+</html>

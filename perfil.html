@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="img/banner.png" class="header">
+    <header>
+        <div class="contenedor">
+            <div class="grid">
+                <div>
+                    <a href="index.html">
+                        <img src="img/home.svg">
+                    </a>
+                </div>
+                <div>
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.png">
+                    </a>
+                </div>
+                <div>
+                    <a href="ajustes.html">
+                        <img src="img/config.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile ajustes mb_section">
+            <div class="contenedor">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="index.html">Inicio /</a>
+                    </li>
+                    <li>
+                        <a href="ajustes.html">Ajustes /</a>
+                    </li>
+                    <li>
+                        <p>Perfil</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="contenedor">
+                <h1>Perfil</h1>
+                <div class="profile_box">
+                    <div class="profile_box_img">
+
+                        <div class="user_image">
+                            <div class="user_image_border">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <input type="text" name="" id="" value="Usuario de prueba" class="h2" disabled>
+
+                    </div>
+                    <div class="profile_box_info">
+                        <form class="profile_box_info_content">
+                            <button type="button" class="edit" onclick="editarPerfil()">
+                                <img src="img/edit.png">
+                            </button>
+                            <div class="table">
+                                <div class="tr">
+                                    <div class="td">Estatura:</div>
+                                    <div class="td">
+                                        <input type="text" name="" id="" value="185 cm" disabled>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">Años:</div>
+                                    <div class="td">
+                                        <input type="text" value="0 años" disabled>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">Sexo:</div>
+                                    <div class="td">
+                                        <input type="text" value="Masculino" disabled>
+                                    </div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">Médico:</div>
+                                    <div class="td">Médico no asignado</div>
+                                </div>
+                                <div class="tr">
+                                    <div class="td">ID:</div>
+                                    <div class="td">000000</div>
+                                </div>
+                            </div>
+                            <button type="submit" class="save hidden" id="savebutton">Guardar</button>
+                        </form>
+                    </div>
+                    <div class="profile_box_mail">
+                        <a href="mailto:demouser@juntoslatam.com">demouser@juntoslatam.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="img/footer.png">
+        <div class="contenedor">
+            <img src="img/logo.svg" class="logo">
+            <div class="grid">
+                <div>
+                    <p>
+                        <small>
+                            Este sitio web es propiedad de MERCK S.A., afiliada del Grupo Merck. Su contenido ha sido diseñado exclusivamente para pacientes residentes en Argentina que se encuentran inscriptos en el Programa de Soporte a Pacientes de Saizen®. En ningún caso la información contenida en la misma sustituye la consulta, el tratamiento y las recomendaciones del profesional de la salud.<br><br>
+                            2023 / MERCK S.A. © Todos los derechos reservados | MX-SAI-00101, May/2023<br>
+                            Conozca más sobre MERCK en https://www.merckgroup.com/mx-es
+                        </small>
+                    </p>
+                    <br><br>
+                    <p>© 2023 Merck&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Hecho por InVitro</p>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <p>Horario de Atención:</p>
+                        </li>
+                        <li>
+                            <p>L-S: 08 am - 09 pm</p>
+                        </li>
+                        <li>
+                            <p>Atención hora del centro (CDMX)</p>
+                        </li>
+                        <li>
+                            <p>Tel: (800) 9420 100</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="internal">
+                        <li>
+                            <a href="#">Términos y Condiciones</a>
+                        </li>
+                        <li>
+                            <a href="#">Política de Privacidad</a>
+                        </li>
+                        <li>
+                            <a href="#">Política de Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function editarPerfil(){
+            const inputs = document.querySelectorAll('input')
+            const btn = document.getElementById('savebutton')
+
+            if(btn.classList.contains('hidden')){
+                inputs.forEach(input => {
+                    input.disabled = false;
+                });
+                btn.classList.remove('hidden');
+            }else{
+                inputs.forEach(input => {
+                    input.disabled = true;
+                });
+                btn.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>
