@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
+@import "responsive.css";
 * {
   margin: 0;
   padding: 0;
@@ -87,7 +88,6 @@ section {
   top: 0px;
   left: 0;
   width: 100%;
-  height: 300px;
   z-index: 1;
   transition: height 0.5s ease;
 }
@@ -1259,6 +1259,11 @@ article:hover .toast {
 
 .etapa {
   padding: 8rem 0 3rem;
+}
+@media (max-width: 700px) {
+  .etapa {
+    display: none;
+  }
 }
 
 /*the container must be positioned relative:*/
@@ -2448,179 +2453,4 @@ article:hover .toast {
 .etapas .timeline.time6 .dot:nth-child(7),
 .etapas .timeline.time6 .dot:nth-child(8) {
   background: #ffc545;
-}
-
-.procesos_ver {
-  display: none;
-  border: none;
-  background-color: transparent;
-  height: 50px;
-  width: 190px;
-  padding: 0 20px;
-  position: absolute;
-  right: 20px;
-  border-radius: 50px;
-  background-color: #fe2f97;
-  color: #ffc545;
-  animation: animacionAncho 3s alternate infinite;
-  font-size: 18px;
-}
-.procesos_ver span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  padding-right: 25px;
-}
-.procesos_ver img {
-  position: absolute;
-  height: 100%;
-  right: 0px;
-  bottom: 10px;
-  height: 100px;
-}
-
-.close-modal {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: none;
-  background-color: #ffc545;
-}
-.close-modal div {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #5d56a0;
-  font-size: 20px;
-  font-weight: bold;
-  color: #C3D9EB;
-}
-
-@keyframes animacionAncho {
-  0% {
-    width: 50px; /* Ancho inicial */
-    color: transparent;
-    font-size: 8px;
-  }
-  30% {
-    width: 190px; /* Ancho a 50px */
-    color: #ffc545;
-    font-size: 18px;
-  }
-  70% {
-    width: 190px; /* Ancho a 50px */
-    color: #ffc545;
-    font-size: 18px;
-  }
-  100% {
-    width: 50px; /* Ancho de vuelta a 100% */
-    color: transparent;
-    font-size: 8px;
-  }
-}
-@media (max-width: 1300px) {
-  .modules .contenedor {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0;
-  }
-  .modules .contenedor .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 10px;
-  }
-  .modules .contenedor .row .module {
-    width: 280px;
-  }
-  .modules .contenedor .row .module .module_toast {
-    display: none;
-  }
-}
-@media (max-width: 700px) {
-  .procesos_ver {
-    display: block;
-  }
-  header .logo img {
-    width: 100px !important;
-  }
-  .header {
-    height: 150px;
-  }
-  .modules .contenedor .row {
-    flex-direction: column;
-  }
-  .modules .contenedor h1 {
-    font-size: 18px;
-  }
-  .modules .contenedor b {
-    font-size: 20px;
-  }
-  .etapa_responsive {
-    display: none;
-  }
-  footer {
-    margin-top: 70px;
-    height: 980px;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    padding: 0 30px;
-    gap: 15px;
-    background: linear-gradient(to bottom, transparent 0%, #123058 11.5%, #123058 100%);
-  }
-  footer::before {
-    background-size: contain;
-  }
-  footer .personaje {
-    height: 230px;
-    width: auto;
-    right: auto;
-    left: auto;
-  }
-  footer .contenedor {
-    top: 7%;
-    left: auto;
-    transform: none;
-  }
-  footer .contenedor .grid {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  footer .contenedor .grid div {
-    border-right: none;
-    border-left: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  footer .contenedor .grid div ul {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  footer .contenedor .grid div:nth-child(1), footer .contenedor .grid div:nth-child(2) {
-    border-bottom: 1px solid #ffc545;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-  }
 }/*# sourceMappingURL=main.css.map */
