@@ -103,9 +103,7 @@
         <section class="etapa etapa_responsive">
             <div class="contenedor">
                 <button class="close-modal">
-                    <div>
-                        x
-                    </div>
+                    x
                 </button>
                 <div class="etapas">
                     <p>Etapas de<br><b>tu proceso</b></p>
@@ -129,15 +127,14 @@
         </section>
     </main>
 
-    <button class="procesos_ver">
-        <img src="img/bandera.png" alt="">
-        <span>
-            Revisa tus
-            <strong>procesos</strong>
-        </span>
-    </button>
-
     <footer>
+        <button class="procesos_ver">
+            <img src="img/bandera.png" alt="">
+            <span>
+                Revisa tus
+                <strong>procesos</strong>
+            </span>
+        </button>
         <img class="personaje" src="img/chicaFooter.png" alt="">
         <div class="fondo_footer"></div>
         <div class="contenedor">
@@ -155,17 +152,13 @@
                     <p>© 2023 Merck&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Hecho por InVitro</p>
                 </div>
                 <div>
-                    <ul>
+                    <ul class="atencion">
                         <li>
                             <p>Horario de Atención:</p>
-                        </li>
-                        <li>
                             <p>L-S: 08 am - 09 pm</p>
                         </li>
                         <li>
                             <p>Atención hora del centro (CDMX)</p>
-                        </li>
-                        <li>
                             <p>Tel: (800) 9420 100</p>
                         </li>
                     </ul>
@@ -174,11 +167,7 @@
                     <ul class="internal">
                         <li>
                             <a href="#">Términos y Condiciones</a>
-                        </li>
-                        <li>
                             <a href="#">Política de Privacidad</a>
-                        </li>
-                        <li>
                             <a href="#">Política de Cookies</a>
                         </li>
                     </ul>
@@ -249,6 +238,22 @@
             timelineToast.className = `timeline_toast toast${n}`
         }
         window.onpaint = toast(1);
+
+        const buttonProcesos = document.querySelector('.procesos_ver')
+        const cerraProcesos = document.querySelector('.close-modal')
+        const etapas = document.querySelector('.etapa_responsive')
+
+        buttonProcesos.addEventListener('click', () => {
+            etapas.classList.add('activedEtapas')
+            document.body.classList.add('modal-open');
+            buttonProcesos.style.zIndex = "1";
+        })
+
+        cerraProcesos.addEventListener('click', () => {
+            etapas.classList.remove('activedEtapas')
+            document.body.classList.remove('modal-open');
+            buttonProcesos.style.zIndex = "5";
+        })
     </script>
 
 </body>
