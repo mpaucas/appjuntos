@@ -202,7 +202,8 @@ main {
     grid-template-columns: 100%;
   }
 }
-.modules .row a, .modules .row button {
+.modules .row a,
+.modules .row button {
   width: 100%;
 }
 .modules.ajustes .row {
@@ -1388,7 +1389,7 @@ article:hover .toast {
   width: 274px;
   margin-right: 20px;
   max-width: 100%;
-  background-color: #C3D9EB;
+  background-color: #c3d9eb;
   transition: background-color 0.5s ease-in-out;
   border: none;
   border-radius: 20px;
@@ -1423,34 +1424,44 @@ article:hover .toast {
 #contenedor_logros #cambios span {
   color: #fe2f97;
 }
-#contenedor_logros #progreso:hover, #contenedor_logros .select_menu_1 {
+#contenedor_logros #progreso:hover,
+#contenedor_logros .select_menu_1 {
   background-color: #0f69af;
 }
-#contenedor_logros #progreso:hover span, #contenedor_logros .select_menu_1 span {
+#contenedor_logros #progreso:hover span,
+#contenedor_logros .select_menu_1 span {
   text-align: start;
   color: white !important;
 }
-#contenedor_logros #graficos:hover, #contenedor_logros .select_menu_2 {
+#contenedor_logros #graficos:hover,
+#contenedor_logros .select_menu_2 {
   background-color: #123058;
 }
-#contenedor_logros #graficos:hover span, #contenedor_logros .select_menu_2 span {
+#contenedor_logros #graficos:hover span,
+#contenedor_logros .select_menu_2 span {
   text-align: start;
   color: white !important;
 }
-#contenedor_logros #cambios:hover, #contenedor_logros .select_menu_3 {
+#contenedor_logros #cambios:hover,
+#contenedor_logros .select_menu_3 {
   background-color: #fe2f97;
 }
-#contenedor_logros #cambios:hover span, #contenedor_logros .select_menu_3 span {
+#contenedor_logros #cambios:hover span,
+#contenedor_logros .select_menu_3 span {
   text-align: start;
   color: white !important;
 }
-#contenedor_logros #progreso:hover .mostrar, #contenedor_logros #graficos:hover .mostrar, #contenedor_logros #cambios:hover .mostrar {
+#contenedor_logros #progreso:hover .mostrar,
+#contenedor_logros #graficos:hover .mostrar,
+#contenedor_logros #cambios:hover .mostrar {
   font-size: 10px;
   display: block;
   visibility: visible;
   opacity: 1;
 }
-#contenedor_logros .select_menu_1 .mostrar, #contenedor_logros .select_menu_2 .mostrar, #contenedor_logros .select_menu_3 .mostrar {
+#contenedor_logros .select_menu_1 .mostrar,
+#contenedor_logros .select_menu_2 .mostrar,
+#contenedor_logros .select_menu_3 .mostrar {
   font-size: 10px !important;
   visibility: hidden !important;
   opacity: 0 !important;
@@ -1556,7 +1567,7 @@ article:hover .toast {
 .rango_medida {
   -webkit-appearance: none;
   height: 15px;
-  background: #C3D9EB;
+  background: #c3d9eb;
   border-radius: 50px;
   background-image: linear-gradient(#fe2f97, #fe2f97);
   background-size: 0% 100%;
@@ -1710,7 +1721,7 @@ article:hover .toast {
   background-color: #123058;
 }
 .table_logros tbody tr {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   border-bottom: 10px solid white;
 }
 .table_logros tbody tr td {
@@ -1775,7 +1786,8 @@ article:hover .toast {
   width: 700px;
   margin: 50px auto 0 auto;
 }
-.lista_button button, .lista_button a {
+.lista_button button,
+.lista_button a {
   color: #ffc545;
   transition: background-color 0.5s ease, color 0.5s ease;
   border-radius: 50px;
@@ -1797,13 +1809,15 @@ article:hover .toast {
   color: #0f69af;
   border: 1px solid #ffc545;
 }
-.lista_button button:hover, .lista_button a:hover {
+.lista_button button:hover,
+.lista_button a:hover {
   background-color: transparent;
   color: #123058;
   border: 1px solid #123058;
 }
 
-.tabs_procesos .tab, .tabs_logros .tab {
+.tabs_procesos .tab,
+.tabs_logros .tab {
   display: none;
   background-color: white;
   width: 100%;
@@ -1814,23 +1828,27 @@ article:hover .toast {
   flex-direction: column;
   position: relative;
 }
-.tabs_procesos .tab .titulo_tab, .tabs_logros .tab .titulo_tab {
+.tabs_procesos .tab .titulo_tab,
+.tabs_logros .tab .titulo_tab {
   font-size: 45px;
   color: #0f69af;
   font-weight: bold;
 }
-.tabs_procesos .tab .section_tab, .tabs_logros .tab .section_tab {
+.tabs_procesos .tab .section_tab,
+.tabs_logros .tab .section_tab {
   background-color: white;
   padding: 50px;
   border-radius: 25px;
 }
-.tabs_procesos .tab .section_tab .graficos, .tabs_logros .tab .section_tab .graficos {
+.tabs_procesos .tab .section_tab .graficos,
+.tabs_logros .tab .section_tab .graficos {
   height: 450px;
   width: 750px;
   border-radius: 25px;
   background-color: gray;
 }
-.tabs_procesos .tab .tab_switch, .tabs_logros .tab .tab_switch {
+.tabs_procesos .tab .tab_switch,
+.tabs_logros .tab .tab_switch {
   display: none;
   justify-content: center;
   align-items: center;
@@ -1840,13 +1858,15 @@ article:hover .toast {
   border: 5px solid #fe2f97;
   padding: 70px;
 }
-.tabs_procesos .tab .tab_switch .lista_botones, .tabs_logros .tab .tab_switch .lista_botones {
+.tabs_procesos .tab .tab_switch .lista_botones,
+.tabs_logros .tab .tab_switch .lista_botones {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
 }
-.tabs_procesos .tab .tab_switch .lista_botones .btn_amarillo, .tabs_logros .tab .tab_switch .lista_botones .btn_amarillo {
+.tabs_procesos .tab .tab_switch .lista_botones .btn_amarillo,
+.tabs_logros .tab .tab_switch .lista_botones .btn_amarillo {
   border: 1px solid #ffc545;
   background-color: #ffc545;
   color: #0f69af;
@@ -1860,24 +1880,31 @@ article:hover .toast {
   align-items: center;
   gap: 10px;
 }
-.tabs_procesos .tab .tab_switch .lista_botones .btn_amarillo span, .tabs_logros .tab .tab_switch .lista_botones .btn_amarillo span {
+.tabs_procesos .tab .tab_switch .lista_botones .btn_amarillo span,
+.tabs_logros .tab .tab_switch .lista_botones .btn_amarillo span {
   width: -moz-min-content;
   width: min-content;
   text-align: start;
   font-size: 18px;
 }
-.tabs_procesos .tab .tab_switch .lista_botones .btn_amarillo:hover, .tabs_logros .tab .tab_switch .lista_botones .btn_amarillo:hover {
+.tabs_procesos .tab .tab_switch .lista_botones .btn_amarillo:hover,
+.tabs_logros .tab .tab_switch .lista_botones .btn_amarillo:hover {
   border-color: #0f69af;
   background-color: transparent;
 }
-.tabs_procesos .tab .tab_switch .tabla_datos table, .tabs_logros .tab .tab_switch .tabla_datos table {
+.tabs_procesos .tab .tab_switch .tabla_datos table,
+.tabs_logros .tab .tab_switch .tabla_datos table {
   border-collapse: collapse;
 }
-.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr, .tabs_logros .tab .tab_switch .tabla_datos table tbody tr {
+.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr,
+.tabs_logros .tab .tab_switch .tabla_datos table tbody tr {
   background-color: white;
-  border-bottom: 10px solid #EEF5FC;
+  border-bottom: 10px solid #eef5fc;
 }
-.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td div, .tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td button, .tabs_logros .tab .tab_switch .tabla_datos table tbody tr td div, .tabs_logros .tab .tab_switch .tabla_datos table tbody tr td button {
+.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td div,
+.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td button,
+.tabs_logros .tab .tab_switch .tabla_datos table tbody tr td div,
+.tabs_logros .tab .tab_switch .tabla_datos table tbody tr td button {
   border: none;
   background-color: transparent;
   display: flex;
@@ -1887,7 +1914,10 @@ article:hover .toast {
   gap: 10px;
   padding: 10px 20px;
 }
-.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td div input, .tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td button input, .tabs_logros .tab .tab_switch .tabla_datos table tbody tr td div input, .tabs_logros .tab .tab_switch .tabla_datos table tbody tr td button input {
+.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td div input,
+.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td button input,
+.tabs_logros .tab .tab_switch .tabla_datos table tbody tr td div input,
+.tabs_logros .tab .tab_switch .tabla_datos table tbody tr td button input {
   border: 1px solid #5d56a0;
   font-size: 18px;
   border-radius: 20px;
@@ -1897,25 +1927,33 @@ article:hover .toast {
   background-color: white;
   transition: background-color 0.5s ease;
 }
-.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td div input:disabled, .tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td button input:disabled, .tabs_logros .tab .tab_switch .tabla_datos table tbody tr td div input:disabled, .tabs_logros .tab .tab_switch .tabla_datos table tbody tr td button input:disabled {
+.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td div input:disabled,
+.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr td button input:disabled,
+.tabs_logros .tab .tab_switch .tabla_datos table tbody tr td div input:disabled,
+.tabs_logros .tab .tab_switch .tabla_datos table tbody tr td button input:disabled {
   color: #ffc545;
   font-size: 18px;
   background-color: #5d56a0;
 }
-.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr .principal, .tabs_logros .tab .tab_switch .tabla_datos table tbody tr .principal {
+.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr .principal,
+.tabs_logros .tab .tab_switch .tabla_datos table tbody tr .principal {
   border-radius: 25px 0px 0px 25px;
 }
-.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr .final, .tabs_logros .tab .tab_switch .tabla_datos table tbody tr .final {
+.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr .final,
+.tabs_logros .tab .tab_switch .tabla_datos table tbody tr .final {
   border-radius: 0px 25px 25px 0px;
 }
-.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr .hidden, .tabs_logros .tab .tab_switch .tabla_datos table tbody tr .hidden {
+.tabs_procesos .tab .tab_switch .tabla_datos table tbody tr .hidden,
+.tabs_logros .tab .tab_switch .tabla_datos table tbody tr .hidden {
   display: none;
 }
-.tabs_procesos .tab .tab_switch .tabla_datos table tbody .fila_claro, .tabs_logros .tab .tab_switch .tabla_datos table tbody .fila_claro {
-  background-color: #C3D9EB !important;
-  border-bottom: 10px solid #EEF5FC;
+.tabs_procesos .tab .tab_switch .tabla_datos table tbody .fila_claro,
+.tabs_logros .tab .tab_switch .tabla_datos table tbody .fila_claro {
+  background-color: #c3d9eb !important;
+  border-bottom: 10px solid #eef5fc;
 }
-.tabs_procesos .tab .tab_switch .btn_rosa, .tabs_logros .tab .tab_switch .btn_rosa {
+.tabs_procesos .tab .tab_switch .btn_rosa,
+.tabs_logros .tab .tab_switch .btn_rosa {
   text-align: center;
   background-color: #fe2f97;
   color: #ffc545;
@@ -1927,7 +1965,8 @@ article:hover .toast {
   padding: 10px 20px;
   border: none;
 }
-.tabs_procesos .tab .aviso_rosa, .tabs_logros .tab .aviso_rosa {
+.tabs_procesos .tab .aviso_rosa,
+.tabs_logros .tab .aviso_rosa {
   background-color: #fe2f97;
   text-align: center;
   color: #ffc545;
@@ -1936,40 +1975,49 @@ article:hover .toast {
   width: 520px;
   font-size: 20px;
 }
-.tabs_procesos .inicial, .tabs_logros .inicial {
+.tabs_procesos .inicial,
+.tabs_logros .inicial {
   gap: 100px;
 }
-.tabs_procesos .secundario, .tabs_logros .secundario {
+.tabs_procesos .secundario,
+.tabs_logros .secundario {
   gap: 50px;
 }
-.tabs_procesos .selected, .tabs_logros .selected {
+.tabs_procesos .selected,
+.tabs_logros .selected {
   display: flex !important;
 }
-.tabs_procesos .sub_titulo_etapas, .tabs_logros .sub_titulo_etapas {
+.tabs_procesos .sub_titulo_etapas,
+.tabs_logros .sub_titulo_etapas {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 5%;
 }
-.tabs_procesos .sub_titulo_etapas img, .tabs_logros .sub_titulo_etapas img {
+.tabs_procesos .sub_titulo_etapas img,
+.tabs_logros .sub_titulo_etapas img {
   height: 40px;
 }
-.tabs_procesos .logros, .tabs_logros .logros {
+.tabs_procesos .logros,
+.tabs_logros .logros {
   background-color: transparent;
 }
-.tabs_procesos .especial, .tabs_logros .especial {
+.tabs_procesos .especial,
+.tabs_logros .especial {
   background-image: url("../img/banner_tab_especial.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   gap: 20px;
 }
-.tabs_procesos .especial .titulo_tab, .tabs_logros .especial .titulo_tab {
+.tabs_procesos .especial .titulo_tab,
+.tabs_logros .especial .titulo_tab {
   font-size: 45px;
   color: #ffc545;
   font-weight: bold;
 }
-.tabs_procesos .especial .descripcion_tab, .tabs_logros .especial .descripcion_tab {
+.tabs_procesos .especial .descripcion_tab,
+.tabs_logros .especial .descripcion_tab {
   color: white;
   font-size: 30px;
   font-weight: 600;
@@ -1977,7 +2025,8 @@ article:hover .toast {
   justify-content: center;
   align-items: center;
 }
-.tabs_procesos .especial .descripcion_tab span, .tabs_logros .especial .descripcion_tab span {
+.tabs_procesos .especial .descripcion_tab span,
+.tabs_logros .especial .descripcion_tab span {
   font-size: 100px;
   color: #ffc545;
   font-weight: bold;
@@ -2023,7 +2072,7 @@ article:hover .toast {
   position: relative;
   top: 0;
   background-color: #0f69af;
-  height: 45%;
+  height: 19%;
   width: 100%;
   transition: width 0.5s ease;
   border-radius: 40px;
@@ -2056,7 +2105,9 @@ article:hover .toast {
   align-items: center;
   left: -170% !important;
 }
-.timeline-container .step, .timeline-container .step_visualizar, .timeline-container .step_logros {
+.timeline-container .step,
+.timeline-container .step_visualizar,
+.timeline-container .step_logros {
   position: absolute;
   bottom: -10px;
   transform: translateX(-50%);
@@ -2067,7 +2118,9 @@ article:hover .toast {
   cursor: pointer;
   transition: background-color 0.5s ease;
 }
-.timeline-container .step .time_line_toast, .timeline-container .step_visualizar .time_line_toast, .timeline-container .step_logros .time_line_toast {
+.timeline-container .step .time_line_toast,
+.timeline-container .step_visualizar .time_line_toast,
+.timeline-container .step_logros .time_line_toast {
   position: absolute;
   bottom: calc(100% + 26px);
   background: #123058;
@@ -2081,10 +2134,12 @@ article:hover .toast {
   left: -200%;
   width: 170px;
   text-align: center;
-  color: #7A7A7A;
+  color: #7a7a7a;
   font-size: 20px;
 }
-.timeline-container .step .time_line_toast::before, .timeline-container .step_visualizar .time_line_toast::before, .timeline-container .step_logros .time_line_toast::before {
+.timeline-container .step .time_line_toast::before,
+.timeline-container .step_visualizar .time_line_toast::before,
+.timeline-container .step_logros .time_line_toast::before {
   position: absolute;
   content: "";
   left: 50%;
@@ -2107,7 +2162,7 @@ article:hover .toast {
   align-items: center;
 }
 .timeline-container .step_select .time_line_toast::before {
-  border-top: 14px solid #ffc545;
+  border-top: 14px solid #ffc545 !important;
 }
 .timeline-container .step_select_rosa {
   background-color: #fe2f97;
@@ -2120,9 +2175,11 @@ article:hover .toast {
   align-items: center;
 }
 .timeline-container .step_select_rosa .time_line_toast::before {
-  border-top: 14px solid #fe2f97;
+  border-top: 14px solid #fe2f97 !important;
 }
-.timeline-container .step:nth-child(1), .timeline-container .step_visualizar:nth-child(1), .timeline-container .step_logros:nth-child(1) {
+.timeline-container .step:nth-child(1),
+.timeline-container .step_visualizar:nth-child(1),
+.timeline-container .step_logros:nth-child(1) {
   left: 0;
 }
 .timeline-container .step:nth-child(2) {
@@ -2248,7 +2305,8 @@ article:hover .toast {
   align-items: center;
   gap: 25px;
 }
-.modal .modal-add .input-group input[type=number], .modal .modal-add .input-group input[type=date] {
+.modal .modal-add .input-group input[type=number],
+.modal .modal-add .input-group input[type=date] {
   padding: 15px;
   font-size: 18px;
   border: none;
@@ -2269,7 +2327,7 @@ article:hover .toast {
 }
 .modal .close:hover,
 .modal .close:focus {
-  color: #C3D9EB;
+  color: #c3d9eb;
   text-decoration: none;
   cursor: pointer;
 }
@@ -2669,7 +2727,8 @@ article:hover .toast {
     border-bottom: 1px solid white;
     padding-bottom: 20px;
   }
-  footer .contenedor .grid div:nth-child(2), footer .contenedor .grid div:nth-child(3) {
+  footer .contenedor .grid div:nth-child(2),
+  footer .contenedor .grid div:nth-child(3) {
     width: 250px;
   }
 }
@@ -2750,28 +2809,197 @@ article:hover .toast {
     width: 250px;
     max-width: 100%;
   }
-  body:has(#contenedor_logros) .etapas {
+  body:has(#contenedor_logros) .contenedor {
+    width: 98%;
+    margin: auto auto 6vh auto;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .titulo_tab, body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .titulo_tab {
+    text-align: center !important;
+    max-width: 108%;
+    font-size: 30px;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .etapas, body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .etapas {
+    flex-direction: column;
+    position: relative;
+    left: -70px;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 35px;
   }
-  body:has(#contenedor_logros) .etapas p:nth-child(1) {
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .etapas p:nth-child(1), body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .etapas p:nth-child(1) {
     display: none;
   }
-  body:has(#contenedor_logros) .etapas .timeline-container {
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .etapas .timeline-container, body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .etapas .timeline-container {
     width: 10px;
     height: 450px;
   }
-  body:has(#contenedor_logros) .etapas .timeline-container .progress-avance {
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .etapas .timeline-container .progress-avance, body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .etapas .timeline-container .progress-avance {
     align-items: flex-start;
     height: 100%;
   }
-  body:has(#contenedor_logros) .etapas .timeline-container .progress-avance .timeline-progress {
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .etapas .timeline-container .progress-avance .timeline-progress, body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .etapas .timeline-container .progress-avance .timeline-progress {
     display: none;
   }
-  body:has(#contenedor_logros) .etapas .timeline-container .progress-avance .timeline-progress-height {
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .etapas .timeline-container .progress-avance .timeline-progress-height, body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .etapas .timeline-container .progress-avance .timeline-progress-height {
     display: inline-block;
     width: 100%;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_logros {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab {
+    padding: 40px 20px;
+    gap: 50px !important;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .tab_switch {
+    width: 100%;
+    padding: 70px 30px;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .tab_switch .section_tab {
+    max-width: 100%;
+    padding: 30px;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .tab_switch .section_tab .graficos {
+    max-width: 100%;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .tab_switch .lista_botones {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .tab_switch .tabla_datos {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_logros .tab .aviso_rosa {
+    max-width: 98%;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_procesos .tab {
+    padding: 0;
+    background-color: transparent;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .graficos_contenido {
+    flex-wrap: wrap;
+    row-gap: 15px;
+    max-width: 100%;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .graficos_contenido .contenido {
+    max-width: 100%;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .graficos_contenido .contenido .titulo {
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .graficos_contenido .contenido .graficos {
+    max-width: 100%;
+  }
+  body:has(#contenedor_logros) .step_select .time_line_toast::before {
+    border-right: 14px solid #ffc545 !important;
+  }
+  body:has(#contenedor_logros) .step_select_rosa .time_line_toast::before {
+    border-right: 14px solid #fe2f97 !important;
+  }
+  body:has(#contenedor_logros) .step,
+  body:has(#contenedor_logros) .step_visualizar,
+  body:has(#contenedor_logros) .step_logros {
+    left: 5px;
+  }
+  body:has(#contenedor_logros) .step .time_line_toast,
+  body:has(#contenedor_logros) .step_visualizar .time_line_toast,
+  body:has(#contenedor_logros) .step_logros .time_line_toast {
+    left: 153% !important;
+    height: -moz-fit-content;
+    height: fit-content;
+    top: -24px;
+  }
+  body:has(#contenedor_logros) .step .time_line_toast::before,
+  body:has(#contenedor_logros) .step_visualizar .time_line_toast::before,
+  body:has(#contenedor_logros) .step_logros .time_line_toast::before {
+    position: absolute;
+    content: "";
+    left: -7%;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-left: none;
+    border-right: 14px solid #123058;
+    border-bottom: 10px solid transparent !important;
+    border-top: 10px solid transparent !important;
+  }
+  body:has(#contenedor_logros) .step_visualizar .time_line_toast, body:has(#contenedor_logros) .step_logros .time_line_toast {
+    top: -10px;
+  }
+  body:has(#contenedor_logros) .step .time_line_toast {
+    top: -24px;
+  }
+  body:has(#contenedor_logros) .step:nth-child(1),
+  body:has(#contenedor_logros) .step_visualizar:nth-child(1),
+  body:has(#contenedor_logros) .step_logros:nth-child(1) {
+    top: 0;
+  }
+  body:has(#contenedor_logros) .step:nth-child(2) {
+    top: 19%;
+  }
+  body:has(#contenedor_logros) .step:nth-child(3) {
+    top: 44%;
+  }
+  body:has(#contenedor_logros) .step:nth-child(4) {
+    top: 69%;
+  }
+  body:has(#contenedor_logros) .step:nth-child(5) {
+    top: 94%;
+  }
+  body:has(#contenedor_logros) .step_visualizar:nth-child(2) {
+    top: 10.6%;
+  }
+  body:has(#contenedor_logros) .step_visualizar:nth-child(3) {
+    top: 27.2%;
+  }
+  body:has(#contenedor_logros) .step_visualizar:nth-child(4) {
+    top: 43.8%;
+  }
+  body:has(#contenedor_logros) .step_visualizar:nth-child(5) {
+    top: 60.4%;
+  }
+  body:has(#contenedor_logros) .step_visualizar:nth-child(6) {
+    top: 77%;
+  }
+  body:has(#contenedor_logros) .step_visualizar:nth-child(7) {
+    top: 94%;
+  }
+  body:has(#contenedor_logros) .step_logros:nth-child(2) {
+    top: 14%;
+  }
+  body:has(#contenedor_logros) .step_logros:nth-child(3) {
+    top: 34%;
+  }
+  body:has(#contenedor_logros) .step_logros:nth-child(4) {
+    top: 54%;
+  }
+  body:has(#contenedor_logros) .step_logros:nth-child(5) {
+    top: 74%;
+  }
+  body:has(#contenedor_logros) .step_logros:nth-child(6) {
+    top: 94%;
+  }
+  body:has(#contenedor_logros) .timeline-container .progress-avance #timeline-logro-height {
+    height: 40%;
+  }
+  body:has(#contenedor_logros) .timeline-container .progress-avance #timeline-max-height {
+    height: 33.2%;
+  }
+  body:has(#contenedor_logros) .timeline-container .progress-avance #timeline-pro-height {
+    height: 49.8%;
+  }
+  body:has(#contenedor_logros) .timeline-container .progress-avance #timeline-plus-height {
+    height: 16.6%;
+  }
+  body:has(#contenedor_logros) .timeline-container .progress-avance #timeline-master-height {
+    height: 66.4%;
   }
 }
 @media (max-width: 1000px) {
@@ -2944,7 +3172,9 @@ article:hover .toast {
     align-items: center;
     flex-direction: column;
   }
-  .timeline.time1 .timeline_toast .grid div:nth-child(1), .timeline.time1 .timeline_toast .grid div:nth-child(2), .timeline.time1 .timeline_toast .grid div:nth-child(3) {
+  .timeline.time1 .timeline_toast .grid div:nth-child(1),
+  .timeline.time1 .timeline_toast .grid div:nth-child(2),
+  .timeline.time1 .timeline_toast .grid div:nth-child(3) {
     border-bottom: 1px solid #123058;
     padding-bottom: 5px;
   }
@@ -3142,7 +3372,8 @@ article:hover .toast {
     margin: 0;
     padding: 0;
   }
-  footer .contenedor .grid div:nth-child(1), footer .contenedor .grid div:nth-child(2) {
+  footer .contenedor .grid div:nth-child(1),
+  footer .contenedor .grid div:nth-child(2) {
     border-bottom: 1px solid #ffc545;
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -3225,7 +3456,8 @@ article:hover .toast {
   .anual_objective {
     padding: 0;
   }
-  .anual_objective h2, .anual_objective h3 {
+  .anual_objective h2,
+  .anual_objective h3 {
     font-size: 20px;
   }
   .anual_objective .pesaje img {
@@ -3234,7 +3466,8 @@ article:hover .toast {
   .anual_objective .save {
     font-size: 20px;
   }
-  .custom-select .select-selected, .custom-select .select-items {
+  .custom-select .select-selected,
+  .custom-select .select-items {
     font-size: 20px;
   }
   .config_process .cantidades_tiempo {
@@ -3261,6 +3494,18 @@ article:hover .toast {
     padding: 0;
     right: -1000px;
     transition: right 0.5s ease;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_procesos .especial {
+    background-image: url(../img/banner_tab_especial_responsive.png);
+    padding: 15px !important;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_procesos .tab {
+    padding: 0;
+    background-color: transparent;
+  }
+  body:has(#contenedor_logros) .contenedor .tabs_procesos .tab .descripcion_tab {
+    display: flex;
+    flex-direction: column;
   }
   .close-modal {
     top: -20px;
