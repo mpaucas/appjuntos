@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="libraries/animate.min.css">
+    <link rel="stylesheet" href="libraries/splide.min.css">
     <title>Document</title>
   </head>
   <body>
@@ -66,30 +68,42 @@
             </div>
           </div>
         </div>
-        <div class="bg-white">
-          <div class="contenedor center contenedor_logros">
-            <button id="progreso" data-number="1" class="menu_logros">
-              <img src="img/copa.png">
-              <div class="col">
-                <span>Tu progreso</span>
-                <span class="mostrar">Ver</span>
+        <div class="bg-white center">
+          <!-- <div class="contenedor center contenedor_logros"> -->
+            <section id="contenedor_logros" class="splide" aria-label="Basic Structure Example">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <button id="progreso" data-number="1" class="menu_logros">
+                      <img src="img/copa.png">
+                      <div class="col">
+                        <span>Tu progreso</span>
+                        <span class="mostrar">Ver</span>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="splide__slide">
+                    <button id="graficos" data-number="2" class="menu_logros">
+                      <img src="img/graficos.png">
+                      <div class="col">
+                        <span>Gráficos de medidas</span>
+                        <span class="mostrar">Ver</span>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="splide__slide">
+                    <button id="cambios" data-number="3" class="menu_logros">
+                      <img src="img/nave.png">
+                      <div class="col">
+                        <span>Evaluación de cambios</span>
+                        <span class="mostrar">Ver</span>
+                      </div>
+                    </button>
+                  </li>
+                </ul>
               </div>
-            </button>
-            <button id="graficos" data-number="2" class="menu_logros">
-              <img src="img/graficos.png">
-              <div class="col">
-                <span>Gráficos de medidas</span>
-                <span class="mostrar">Ver</span>
-              </div>
-            </button>
-            <button id="cambios" data-number="3" class="menu_logros">
-              <img src="img/nave.png">
-              <div class="col">
-                <span>Evaluación de cambios</span>
-                <span class="mostrar">Ver</span>
-              </div>
-            </button>
-          </div>
+            </section>
+          <!-- </div> -->
         </div>
         <div class="contenedor">
           <div class="tabs_logros">
@@ -452,23 +466,37 @@
             </div>
           </div>
         </div>
-        <div class="contenedor contenedor_procesos">
-          <button class="btn_proceso selected" data-number="1">
-            <img src="img/inicial.png">
-            <span>Ver tu proceso inicial</span>
-          </button>
-          <button class="btn_proceso" data-number="2">
-            <img src="img/cambio.png">
-            <span>Ver tu proceso al cambio</span>
-          </button>
-          <button class="btn_proceso" data-number="3">
-            <img src="img/contenidos.png">
-            <span>Ver tus contenidos de mantenimiento</span>
-          </button>
-          <button class="btn_proceso" data-number="4">
-            <img src="img/puntos.png">
-            <span>Ver tus puntos ganados</span>
-          </button>
+        <div class="contenedor center">
+          <section id="contenedor_procesos" class="splide" aria-label="Basic Structure Example">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <button class="btn_proceso selected" data-number="1">
+                    <img src="img/inicial.png">
+                    <span>Ver tu proceso inicial</span>
+                  </button>
+                </li>
+                <li class="splide__slide">
+                  <button class="btn_proceso" data-number="2">
+                    <img src="img/cambio.png">
+                    <span>Ver tu proceso al cambio</span>
+                  </button>
+                </li>
+                <li class="splide__slide">
+                  <button class="btn_proceso" data-number="3">
+                    <img src="img/contenidos.png">
+                    <span>Ver tus contenidos de mantenimiento</span>
+                  </button>
+                </li>
+                <li class="splide__slide">
+                  <button class="btn_proceso" data-number="4">
+                    <img src="img/puntos.png">
+                    <span>Ver tus puntos ganados</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
         <div class="contenedor">
           <div class="tabs_procesos">
@@ -479,6 +507,7 @@
                 <div class="timeline-container">
                   <div class="progress-avance">
                     <div class="timeline-progress" id="timeline-progress"></div>
+                    <div class="timeline-progress-height" id="timeline-progress-height"></div>
                   </div>
                   <div class="step step_select" onclick="selectStep(1)">
                     <div class="time_line_toast">
@@ -701,7 +730,8 @@
           </div>
       </div>
   </footer>
-
+  <script src="libraries/splide.min.js"></script>
+  <script src="js/sliders.js"></script>
     <script>
       function selectStep(stepNumber) {
         // Get all steps
@@ -721,8 +751,10 @@
 
         // Update timeline progress width
         const timelineProgress = document.getElementById('timeline-progress');
+        const timelineProgressHeight = document.getElementById('timeline-progress-height');
         const stepWidth = 100 / steps.length;
         timelineProgress.style.width = `${stepWidth * stepNumber}%`;
+        timelineProgressHeight.style.height = `${stepWidth * stepNumber}%`;
       }
 
       function toggleColumn(e) {

@@ -27,6 +27,11 @@
                         <img src="img/config.svg">
                     </a>
                 </div>
+                <div class="mostrar_filtro">
+                    <button href="ajustes.html">
+                        <img src="img/filtro.svg">
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -54,10 +59,19 @@
                 </div>
             </div>
             <div class="contenedor">
-
+                <a href="index.html" class="back retornarBack">
+                    <img src="img/back.png">
+                    <p>Volver atrás</p>
+                </a>
+                <p class="retornarBack">
+                    Descubre todo el contenido que tenemos para ti
+                </p>
                 <section class="articles">
                     <div class="articles_container">
                         <div class="articles_bar">
+                            <button class="close-filtrar">
+                                x
+                            </button>
                             <h3>Categorías</h3>
                             <ul>
                                 <li>
@@ -291,6 +305,21 @@
             </div>
         </div>
     </footer>
+    <script>
+        const mostrar_filtro = document.querySelector('.mostrar_filtro')
+        const closeBotton = document.querySelector('.close-filtrar')
+        const filtrarPanel = document.querySelector('.articles_bar')
 
+        mostrar_filtro.addEventListener('click', () => {
+            filtrarPanel.classList.add('actived');
+            document.body.classList.add('modal-open');
+        })
+
+        closeBotton.addEventListener('click', () => {
+            filtrarPanel.classList.remove('actived');
+            document.body.classList.remove('modal-open');
+        })
+
+    </script>
 </body>
 </html>
